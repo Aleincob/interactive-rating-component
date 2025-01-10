@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main id="selectRating" class="main">
+      <div class="img-container">
+        <img class="icon-star" src="./images/icon-star.svg" alt="icon-star" />
+      </div>
+      <h1 class="title">How did we do?</h1>
+      <p class="pText">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="btn-container">
+        <button class="rating" id="rating">1</button>
+        <button class="rating" id="rating">2</button>
+        <button class="rating" id="rating">3</button>
+        <button class="rating" id="rating">4</button>
+        <button class="rating" id="rating">5</button>
+      </div>
+
+      <button id="submitBtn" type="submit">Submit</button>
+    </main>
+
+    <main id="thanksView" class="main">
+      <div class="img-container-thank-view">
+        <img
+          class="icon-thank-you"
+          src="./images/illustration-thank-you.svg"
+          alt="icon-star"
+        />
+      </div>
+      <p class="p-container">You selected <span id="span"></span> out of 5</p>
+      <h2 class="title-thanksView">Thank You!</h2>
+      <p class="pText-thanks-view">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch!
+      </p>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>

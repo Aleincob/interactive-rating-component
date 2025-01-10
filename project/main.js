@@ -2,20 +2,31 @@
 // 1: Hacer 5 botones para seleccionar el rating dado (del 1 al 5)
 // 2: Hacer un boton submit con funcion upload para cambiar la vista al de agradecimiento junto con el rating seleccionado
 
-const rating1 = document.querySelector("#rating1");
-const rating2 = document.querySelector("#rating2");
-const rating3 = document.querySelector("#rating3");
-const rating4 = document.querySelector("#rating4");
-const rating5 = document.querySelector("#rating5");
-const submitBtn = document.querySelector("#submitBtn");
+let rating = document.querySelectorAll(".rating");
+let span = document.querySelector("#span");
+const submit = document.querySelector("#submitBtn");
+const selectedRating = document.querySelector("#selectRating");
+const thanksView = document.querySelector("#thanksView");
 
-rating1.addEventListener("click", test);
-rating2.addEventListener("click", test);
-rating3.addEventListener("click", test);
-rating4.addEventListener("click", test);
-rating5.addEventListener("click", test);
-submitBtn.addEventListener("click", test);
+// submit.addEventListener("click", selectRating);
+submit.addEventListener("click", changeZIndex);
 
-function test() {
-  console.log("Funcionando!!!");
+
+function changeZIndex() {
+  selectedRating.style.zIndex = -1;
+  thanksView.style.zIndex = 1;
 }
+
+function selectRating() {
+  span.classList.add(rating);
+  
+}
+
+
+rating.forEach((e) => {
+  e.addEventListener("click", () => {
+    rating.forEach((btn) => btn.classList.remove("active"));
+    e.classList.add("active");
+    span.innerHTML = e.innerHTML;
+  });
+});
